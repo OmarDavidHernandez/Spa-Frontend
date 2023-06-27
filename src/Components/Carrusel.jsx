@@ -5,13 +5,13 @@ import {
 
 const items = [
   {
-    src: 'https://www.banyantree.com/assets/2021-11/bt-puebla-spa2_0.jpg',
+    src: 'img/spa6.jpg',
     altText: 'Slide 1',
-    caption: 'Slide 1',
+    caption: '',
     key: 1,
   },
   {
-    src: 'img/spa2.jpg',
+    src: 'img/spa5.png',
     altText: 'Slide 2',
     caption: 'Slide 2',
     key: 2,
@@ -21,6 +21,12 @@ const items = [
     altText: 'Slide 3',
     caption: 'Slide 3',
     key: 3,
+  },
+  {
+    src: 'img/spa1.png',
+    altText: 'Slide 4',
+    caption: '',
+    key: 4,
   },
 ];
 const Carrusel = () => {
@@ -62,7 +68,7 @@ const Carrusel = () => {
 
     <Row className='mt-3'>
     <Col md="6">
-      <label className='h1 mt-5'>Benvenido a Relaxin SPA</label>
+      <label className='h1 mt-5'>Bienvenido a Relaxin SPA</label>
       <p className='text-green h4'>
       Somos un espacio dedicado a la realización de tratamientos para el cuidado de la belleza y generar equilibrio mental, espiritual y físico.
       </p>

@@ -4,6 +4,13 @@
   .bg-blue{
     background-color: #627188;
   }
+  .bg-card{
+    background-color: #fff2e4 !important;
+    border-color: #998570 !important;
+  }
+  .bg-brown{
+    background-color: #d8d0cd !important;
+  }  
   .imagenescar{
     width: 100%;
     height: 350px;
@@ -15,6 +22,9 @@
   .text-green{
     color: #94a350 !important;
   }
+  .text-title-card{
+    color: #727475 !important;
+  }  
   body{
     background-color: #f7f4f0 !important;  
   }  

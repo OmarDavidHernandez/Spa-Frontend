@@ -7,7 +7,7 @@ const Encabezado = () => {
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <header>
+    <header  className='mb-5'>
         <Navbar expand="lg" fixed="top" className='bg-blue' dark={true}>
         <NavbarBrand href="/">SPA Relaxin</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -17,12 +17,10 @@ const Encabezado = () => {
               <NavLink href="/components/">Servicios</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Testimonios
-              </NavLink>
+              <NavLink href="/components/">Testimonios</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText></NavbarText>
         </Collapse>
         </Navbar>
         <div id='inicio'></div>
