@@ -1,7 +1,8 @@
 import React from 'react'
-import { Row,Col,Form,InputGroup,InputGroupText,Input,Button } from 'reactstrap'
+import { Row,Col } from 'reactstrap'
 
-const Formulario = (parametros) => {
+import FormReservacion from './FormReservacion'
+const Ubicacion = (parametros) => {
   return (
     <Row className='mt-5 bg-white shadow'>
         <Col md='6'>
@@ -43,39 +44,13 @@ const Formulario = (parametros) => {
                 </Col>
             </Row>
         </Col>
-        <Col md='6 shadow'>
-            <Form>
-                <p className='h3 text-center  pt-sm-5'>¡Reserve Ahora!</p>
-                <InputGroup className='mt-5 mb-3'>
-                    <InputGroupText><i className='fa-solid fa-user'></i></InputGroupText>
-                    <Input placeholder="Nombre" />
-                </InputGroup>
-                <InputGroup className='mb-3'>
-                    <InputGroupText><i className='fa-solid fa-phone'></i></InputGroupText>
-                    <Input placeholder="Teléfono" />
-                </InputGroup>
-                <InputGroup className='mb-3'>
-                    <InputGroupText><i className='fa-solid fa-at'></i></InputGroupText>
-                    <Input placeholder="Correo" />
-                </InputGroup>
-                <InputGroup className='mb-3'>
-                    <InputGroupText><i className='fa-solid fa-spa'></i></InputGroupText>
-                    <Input type='select'>
-                    { parametros.servicios.map( (row,i)=>(
-                    <option value={row.id} key={row.id}>{row.nombre}</option>
-                    ))}
-                        
-                    </Input>
-                </InputGroup>
-                <InputGroup className='mb-3'>
-                    <InputGroupText><i className='fa-solid fa-calendar'></i></InputGroupText>
-                    <Input type='date' />
-                </InputGroup>
-                <p className='text-center'><Button color='dark'>Reservar</Button></p>
-            </Form>
+        <Col md='6 shadow' id='reservacion'>
+            <FormReservacion id={null} servicios={parametros.servicios} titulo='Reserve Ahora!' redir='' />
+        </Col>
+        <Col >
         </Col>
     </Row>
   )
 }
 
-export default Formulario
+export default Ubicacion

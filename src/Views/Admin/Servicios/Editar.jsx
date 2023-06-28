@@ -1,8 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import FormServicios from '../../../Components/FormServicios'
 
 const EditarServicio = () => {
+  const {id} = useParams();
   return (
-    <div className='mt-3'>Editar</div>
+    <FormServicios id={id} titulo='Editar servicio' />
   )
 }
 

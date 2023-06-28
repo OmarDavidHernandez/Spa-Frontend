@@ -1,19 +1,20 @@
+import React from 'react'
 import {Link} from 'react-router-dom'
 import {Container,Row,Col,Table,Card,CardBody,CardTitle,CardText,Button} from 'reactstrap'
 import {useState,useEffect} from 'react'
 import {confirmacion,enviarPeticion,obtenerUrl} from '../../../funciones'
 
-const IndexServicios = () => {
+const IndexBlog = () => {
   useEffect(()=>{
-    obtenerServicios();
+    obtenerBlog();
   },[]);
-  const [servicios,setServicios] = useState([]);
-  const obtenerServicios = async() =>{
-    const res = await enviarPeticion('GET','','/servicios','',true);
-    setServicios(res.data);
+  const [blog,setBlog] = useState([]);
+  const obtenerBlog = async() =>{
+    const res = await enviarPeticion('GET','','/blog','',true);
+    setBlog(res.data);
   }
-  const eliminarServicio = (id,nombre) =>{
-    confirmacion(nombre,('/servicios/'+id),'/servicios','',true);
+  const eliminarBlog = (id,nombre) =>{
+    confirmacion(nombre,('/blog/'+id),'/blog','',true);
   }
   return (
     <Container>
@@ -22,25 +23,24 @@ const IndexServicios = () => {
           <Card className='mt-5 bg-white mt-3 shadow text-center'>
               <CardBody>
                   <CardTitle className=''>
-                    <Link to={'/crear-servicio'} className='btn btn-primary'><i className='fa-solid fa-circle-plus'></i> Añadir</Link>
+                    <Link to={'/crear-blog'} className='btn btn-primary'><i className='fa-solid fa-circle-plus'></i> Añadir</Link>
                   </CardTitle>
                   <CardText>
                     <Table responsive bordered striped>
                       <thead>
-                        <tr><th>#</th><th>NOMBRE</th><th>PRECIO</th><th>DESCRIPCION</th><th>IMAGEN</th><th></th><th></th></tr>
+                        <tr><th>#</th><th>TITULO</th><th>DESCRIPCION</th><th>IMAGEN</th><th></th><th></th></tr>
                       </thead>
                       <tbody className='table-group-divider'>
-                      { servicios.map( (row,i)=>(
+                      { blog.map( (row,i)=>(
                         <tr key={row.id}>
                           <td>{ (i+1) }</td>
-                          <td>{ row.nombre}</td>
-                          <td>{ '$'+row.precio}</td>
-                          <td>{ row.descripcion.substring(0, 50)} ...</td>
+                          <td>{ row.titulo}</td>
+                          <td>{ row.descripcion.substring(0, 100)} ...</td>
                           <td><img src={obtenerUrl()+row.imagen} height='60px' /></td>
                           <td>
-                            <Link to={'/editar-servicio/'+row.id} className='btn btn-warning'><i className='fa-solid fa-edit'></i></Link>
+                            <Link to={'/editar-blog/'+row.id} className='btn btn-warning'><i className='fa-solid fa-edit'></i></Link>
                           </td>
-                          <td><Button color='danger' onClick={()=> eliminarServicio(row.id,row.nombre)}>
+                          <td><Button color='danger' onClick={()=> eliminarBlog(row.id,row.titulo)}>
                             <i className='fa-solid fa-trash'></i>
                             </Button>
                           </td>
@@ -57,4 +57,4 @@ const IndexServicios = () => {
   )
 }
 
-export default IndexServicios
+export default IndexBlog

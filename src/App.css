@@ -1,30 +1,37 @@
 .bg-green{
-    background-color: #88b9b3;
-  }
-  .bg-blue{
-    background-color: #627188;
-  }
-  .bg-card{
-    background-color: #fff2e4 !important;
-    border-color: #998570 !important;
-  }
-  .bg-brown{
-    background-color: #d8d0cd !important;
-  }  
-  .imagenescar{
-    width: 100%;
-    height: 350px;
-  }
-  .btn-green{
-    background-color:  #94a350 !important;
-    color:#f7f4f0 !important;
-  }
-  .text-green{
-    color: #94a350 !important;
-  }
-  .text-title-card{
-    color: #727475 !important;
-  }  
-  body{
-    background-color: #f7f4f0 !important;  
-  }  
+  background-color: #88b9b3;
+}
+.bg-blue{
+  background-color: #627188;
+}
+.bg-card{
+  background-color: #fff2e4 !important;
+  border-color: #998570 !important;
+}
+.bg-brown{
+  background-color: #d8d0cd !important;
+}
+.imagenescar{
+  width: 100%;
+  height: 350px;
+}
+.btn-green{
+  background-color:  #94a350 !important;
+  color:#f7f4f0 !important;
+}
+.text-green{
+  color: #94a350 !important;
+}
+.text-title-card{
+  color: #727475 !important;
+}
+body{
+  background-color: #f7f4f0 !important;
+}
+.text-justificado{
+  text-align: justify;
+}
+
+.card-blog{
+  height: 370px;
+}

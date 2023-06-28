@@ -13,13 +13,13 @@ const items = [
   {
     src: 'img/spa5.png',
     altText: 'Slide 2',
-    caption: 'Slide 2',
+    caption: '',
     key: 2,
   },
   {
     src: 'img/spa3.jpg',
     altText: 'Slide 3',
-    caption: 'Slide 3',
+    caption: '',
     key: 3,
   },
   {
@@ -65,14 +65,14 @@ const Carrusel = () => {
         );
       });
   return (
-
+    
     <Row className='mt-3'>
     <Col md="6">
       <label className='h1 mt-5'>Bienvenido a Relaxin SPA</label>
-      <p className='text-green h4'>
-      Somos un espacio dedicado a la realización de tratamientos para el cuidado de la belleza y generar equilibrio mental, espiritual y físico.
+      <p className='text-green h4 text-justificado'>
+      Somos un espacio dedicado a la realización de tratamientos para el cuidado de la belleza y generando equilibrio mental, espiritual y físico.
       </p>
-      <p className='h5'>
+      <p className='h5 text-justificado'>
       Buscamos siempre la innovación y calidad en nuestros productos y servicios, la capacitación es constante en todas las áreas.
       </p>
     </Col>
@@ -102,7 +102,7 @@ const Carrusel = () => {
   </Carousel>
     </Col>
   </Row>
-    
+  
   )
 }
 
